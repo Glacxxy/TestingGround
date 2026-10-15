@@ -4,5 +4,5 @@
   "author": "Glacxxy",
   "version": "0.1.0",
   "entry": "libbasescout.so",
-  "minecraft_versions": ["1.21.*"]
+  "minecraft_versions": ["1.26.*"]
 }
