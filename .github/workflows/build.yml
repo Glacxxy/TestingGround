@@ -13,13 +13,16 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Install Android SDK and NDK
+      - name: Install Android SDK
         uses: android-actions/setup-android@v3
+        with:
+          packages: "platform-tools"
 
-      - name: Install build tools
+      - name: Install build tools and NDK
         run: |
           sudo apt-get update
           sudo apt-get install -y cmake ninja-build
+          yes | sdkmanager --licenses
           sdkmanager "ndk;28.2.13676358"
 
       - name: Configure
