@@ -1,0 +1,8 @@
+{
+  "type": "preload-native",
+  "name": "BaseScout (Prototype)",
+  "author": "Glacxxy",
+  "version": "0.1.0",
+  "entry": "libbasescout.so",
+  "minecraft_versions": ["1.21.*"]
+}
