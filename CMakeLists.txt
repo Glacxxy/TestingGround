@@ -44,7 +44,8 @@ target_compile_options(basescout PRIVATE
 )
 target_link_options(basescout PRIVATE "-Wl,-z,max-page-size=16384")
 find_library(log-lib log REQUIRED)
-target_link_libraries(basescout PRIVATE ${log-lib} fmt::fmt preloader)
+find_library(dl-lib dl REQUIRED)
+target_link_libraries(basescout PRIVATE ${log-lib} ${dl-lib} fmt::fmt preloader)
 
 if(CMAKE_STRIP)
   add_custom_command(TARGET basescout POST_BUILD
